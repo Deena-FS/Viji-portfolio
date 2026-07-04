@@ -55,7 +55,7 @@ export const caseStudies: CaseStudy[] = [
     href: "/case-studies/flow.html",
     title:
       "Flow — a health companion built for your worst days, not your best",
-    company: "Group project · AI PM programme",
+    company: "Group project · AI Product Management programme",
     timeframe: "2026 · 4-person team",
     role: "Research & GTM Strategy Lead",
     summary:
@@ -64,10 +64,34 @@ export const caseStudies: CaseStudy[] = [
     cover: "from-[#2c4a3e] to-[#1e3329]",
     coverImage: "/case-studies/flow-cover.jpg",
     metrics: [
-      { value: "0→1", label: "Concept to live prototype" },
-      { value: "4", label: "Person team" },
-      { value: "Live", label: "Clickable prototype" },
+      { value: "71%", label: "Momentum kept after a missed day, vs 0%" },
+      { value: "48 hrs", label: "Away before the Anchor gently reaches out" },
+      { value: "Live", label: "Clickable prototype, built end to end" },
     ],
+    context:
+      "A 0→1 concept built by a four-person team during an AI Product Management programme. I led the user research and shaped the go-to-market strategy and pitch narrative — so where the story says 'we,' that's the whole team's work, and where it names a specific insight or decision as mine, that's what I personally drove. The research I ran kept surfacing the same uncomfortable truth about why people abandon wellness apps.",
+    problem:
+      "Riya is 28, works in marketing, and has restarted her health routine more times than she can count. She's motivated for a week, life gets hard, she misses two days — and the app's streak resets to zero. The guilt of 'starting over' feels worse than never having tried, so she stops opening the app. The research I led found this pattern everywhere: people don't quit health routines because they stop caring, they quit because exhaustion and too many small decisions make even simple choices feel impossible on a hard day — and most apps are designed only for the good days.",
+    process: [
+      {
+        heading: "Measure return, not consistency",
+        body: "Most health apps reward discipline with streaks — and punish someone at the exact moment they're already struggling by breaking that streak in front of them. Our core decision was to flip what the app measures. Where a streak drops to 0% the day you miss, Flow tracks momentum that only dips: after a missed day you're still at, say, 71% rather than back at zero, and coming back the next day is the thing the whole system is built to notice and reward. As we put it: 'In this system, you can never fail. You can only Flow.'",
+      },
+      {
+        heading: "Read energy from quiet signals, then adapt",
+        body: "Four ideas work quietly in the background instead of as flashy features. Passive intelligence reads signals like how late someone checks in or how often they open the app, to sense energy without ever asking directly. Adaptive support states then reshape the whole interface — fewer choices and gentler suggestions on a drained day, more on a good one. Decision-fatigue reduction shows one 5-minute meal idea rather than fifty to scroll through. Together they make the app feel like it's adapting to a person, not judging one.",
+      },
+      {
+        heading: "Design the moment most apps get wrong — the Anchor",
+        body: "The signature feature is what happens after 48 hours away, the point where most apps greet you with a broken streak and a wall of missed days. Flow does the opposite: the Anchor opens as a gentle check-in, not an alert; it asks 'how are you?' with a low / mid / high answer and no judgment; then it offers one small step — a re-entry, not a relapse. Because momentum only dipped and never zeroed out, coming back never feels like undoing everything already built.",
+      },
+      {
+        heading: "Prove it with a prototype you can click, not a deck",
+        body: "Rather than pitch on slides, the team built a live, working prototype you can actually use — the energy check-in, adaptive meal cards, and momentum tracker all run end to end, and every small win (even just showing up on a hard day) gets saved to a Win Vault. The go-to-market strategy and pitch narrative were mine to shape, and I built them around the same worst-day framing the whole product rests on: a health companion for your worst days, not your best.",
+      },
+    ],
+    outcome:
+      "This is a 0→1 concept with a real, clickable prototype — not a shipped product with retention numbers — so the honest outcome is a validated idea, not a results table. What I'm confident in is the insight the research surfaced (emotional exhaustion, not a lack of fitness knowledge, is the real barrier) and the design response to it (recovery over punishment, momentum over streaks). What isn't proven yet is real-world behaviour over months. The things we said we'd do differently are the honest ones: narrow the MVP to the Anchor experience instead of building the full vision at once, and run far more real user testing early. Further out, the direction I'm most drawn to is a dedicated 'Worst-Day Mode' with ultra-low-effort support — for exactly the days the whole app is built for.",
   },
   {
     slug: "swiggy-voice-to-order",
