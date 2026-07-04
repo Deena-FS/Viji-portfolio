@@ -2,7 +2,6 @@ import type { NavLink, SocialLink } from "./types";
 
 // -------------------------------------------------------------------------
 // Site-wide config — Vijayashanthi Chandrasekar's real details.
-// (`url` is the only value still to confirm: set it to your deployed domain.)
 // -------------------------------------------------------------------------
 export const site = {
   name: "Viji", // display name / logo
@@ -12,7 +11,7 @@ export const site = {
   email: "vijibin94@gmail.com",
   phone: "+91 95979 82684",
   resumeHref: "/resume.pdf", // real résumé lives at public/resume.pdf
-  url: "https://vijayashanthi-chandrasekar.vercel.app", // PLACEHOLDER — replace with your deployed domain
+  url: "https://viji-portfolio-three.vercel.app", // live Vercel domain — feeds metadataBase / OpenGraph
 
   meta: {
     title: "Vijayashanthi Chandrasekar — Product Manager",
