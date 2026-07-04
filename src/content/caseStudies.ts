@@ -52,7 +52,11 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "flow-wellness-app",
-    href: "/case-studies/flow.html",
+    // No `href`: the card routes to the built-in /work/flow-wellness-app detail
+    // page, which renders the long-form fields below. The richer visual telling
+    // and the live prototype are surfaced there as links.
+    interactiveHref: "/case-studies/flow.html",
+    prototypeUrl: "https://flow-sanctuary-app.lovable.app",
     title:
       "Flow — a health companion built for your worst days, not your best",
     company: "Group project · AI Product Management programme",
