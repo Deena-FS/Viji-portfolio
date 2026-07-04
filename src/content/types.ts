@@ -39,18 +39,9 @@ export type CaseStudy = {
   role: string;
   /**
    * The card links straight to this URL — a self-contained HTML case study
-   * served verbatim from /public (e.g. "/case-studies/askhr.html"). Omit it to
-   * route the card to the built-in detail page at /work/<slug>, which renders
-   * the long-form fields below.
+   * served verbatim from /public (e.g. "/case-studies/askhr.html").
    */
   href?: string;
-  /** live, external clickable prototype (e.g. a Lovable / Figma link) */
-  prototypeUrl?: string;
-  /**
-   * a richer, self-contained HTML telling of the same study served from
-   * /public — surfaced as a secondary link on the built-in detail page.
-   */
-  interactiveHref?: string;
   /** short summary used on cards */
   summary: string;
   tags: string[];
