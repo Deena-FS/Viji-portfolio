@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------ *
+ * Design tokens (Tailwind v4 CSS-first config).
+ * Each token becomes a utility, e.g. --color-brand -> bg-brand/text-brand,
+ * --font-serif -> font-serif. Edit here to re-theme the whole site.
+ * Aesthetic: warm editorial — forest green + cream + gold, matching the
+ * AskHR case study so the site and case study read as one system.
+ * ------------------------------------------------------------------ */
+@theme {
+  /* Neutrals */
+  --color-canvas: #faf6ee; /* cream page background */
+  --color-surface: #ffffff; /* cards, raised sections */
+  --color-ink: #232017; /* warm near-black primary text */
+  --color-ink-muted: #5b5647; /* secondary text */
+  --color-ink-soft: #857d6a; /* tertiary / captions */
+  --color-line: #e2d9c5; /* borders, dividers */
+  --color-line-soft: #efe8d9;
+
+  /* Brand */
+  --color-brand: #2f4a3c; /* forest — primary accent */
+  --color-brand-strong: #1e3128; /* deep forest for headers/footer */
+  --color-brand-soft: #e9eee6; /* soft sage — tinted backgrounds / chips */
+  --color-gold: #b08c4f; /* warm gold — secondary accent */
+
+  /* Typography */
+  --font-sans:
+    var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
+  --font-serif: var(--font-fraunces), var(--font-source-serif), ui-serif,
+    Georgia, Cambria, serif;
+}
+
+/* ------------------------------------------------------------------ *
+ * Base layer
+ * ------------------------------------------------------------------ */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Offset anchor targets so the sticky nav doesn't cover section headings */
+    scroll-padding-top: 5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-canvas);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-serif);
+    color: var(--color-ink);
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background-color: var(--color-brand);
+    color: #ffffff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+}
+
+/* ------------------------------------------------------------------ *
+ * Small utilities
+ * ------------------------------------------------------------------ */
+@utility fade-up {
+  animation: fade-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
